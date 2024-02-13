@@ -1,9 +1,6 @@
 package com.demo.assessment.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,7 +15,8 @@ import lombok.NoArgsConstructor;
 public class Institute {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "institute_seq_generator")
+    @SequenceGenerator(name="institute_seq_generator", sequenceName = "institution_seq", allocationSize=1)
     private Long id;
     @NotBlank(message = "Name is required")
     private String name;
