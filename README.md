@@ -9,7 +9,7 @@ Java JDK 8 or higher<br>
 Maven<br>
 Docker <br>
 <h3>Steps</h3>
-Clone the repository: git clone https://github.com/your/repository.git<br>
+Clone the repository: git clone https://github.com/ameenaazad/institution-management-system.git<br>
 Navigate to the project directory: cd institute-management-system<br>
 Build the project: mvn clean install<br>
 <h4>Running the Application</h4>
