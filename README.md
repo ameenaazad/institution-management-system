@@ -42,14 +42,14 @@ Response Format		: {<br>
   "location": "Institute Location",<br>
   "contact": "Contact Information"<br>
 }<br>
-3.	Get Institute by ID
-URL				: /api/register/{id}
-Method				: GET
-Response Format		: {
-  "name": "Institute Name",
-  "location": "Institute Location",
-  "contact": "Contact Information"
-}
+<h4>3.	Get Institute by ID</h4>
+URL				: /api/register/{id}<br>
+Method				: GET<br>
+Response Format		: {<br>
+  "name": "Institute Name",<br>
+  "location": "Institute Location",<br>
+  "contact": "Contact Information"<br>
+}<br>
 
 <h4>4.	Update Institute by ID</h4>
 URL				: /api/register/{id}<br>
