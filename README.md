@@ -12,16 +12,19 @@ Docker <br>
 Clone the repository: git clone https://github.com/ameenaazad/institution-management-system.git<br>
 Navigate to the project directory: cd institute-management-system<br>
 Build the project: mvn clean install<br>
-<h4>Running the Application</h4>
+<h3>Running the Application</h3>
 You can run the application using Maven or as a Docker container.<br>
 <h5>Maven</h5>
 mvn spring-boot:run<br>
-The application will start on https://localhost:443.
+The application will start on http://localhost:8080
 
 <h5>Docker</h5>
-Build the Docker image: docker build -t institute-management-system .<br>
-Run the Docker container: docker run -d -p 8080:8080 institute-management-system<br>
-The application will be accessible at https://localhost:443.<br>
+<ul>
+<li>Build the Docker image: docker build -t assessment-docker-demo .</li><br>
+<li>Create mysql docker container: docker run -d --name mysqlcontainer --network networkmysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=institutiondb -e MYSQL_USER=root -e MYSQL_PASSWORD=root mysql:latest</li>
+<li>Run the Docker container: docker run -d --name assessmentcontainer --network networkmysql -p 8089:8080 -e MYSQL_HOST=mysqlcontainer -e MYSQL_PORT=3306 -e MYSQL_DB_NAME=institutiondb -e MYSQL_USER=root -e MYSQL_PASSWORD=root assessment-docker-demo</li>
+<li>The application will be accessible at http://localhost:8089</li><br>
+</ul>
 
 
 
